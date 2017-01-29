@@ -16,3 +16,11 @@ jspm_packages
 .npm
 .node_repl_history
 .idea
+deployed
+ms_gateway
+index.js
+gruntfile.js
+microservice-gateway*
+production.js
+.npmignore
+.gitignore

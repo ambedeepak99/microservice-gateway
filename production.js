@@ -6,7 +6,7 @@ var path = require('path');
 var fs = require('fs');
 
 //region variables
-var specialCharPattern = /[`~!@#$%^&*()|+\-_=?;:'",.<>\{\}\[\]\\\/]/gi;
+var specialCharPattern = /[`~!@#$%^&*()|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
 var emptyStringPattern = / /g;
 var numberPattern = /^\d+$/;
 var errMsg = "Error!!! ";
@@ -97,11 +97,11 @@ function createGateway(config) {
         }
         if (apiProxy) {
             var microServers = {};
-            if (config.microServiceList && config.microServiceList.length > 0) {
+            if (config.serverList && config.serverList.length > 0) {
                 var microServerStringList = [];
                 var invalidMicroServerStringList = [];
-                for (var i = 0; i < config.microServiceList.length; i++) {
-                    var serverConfig = config.microServiceList[i];
+                for (var i = 0; i < config.serverList.length; i++) {
+                    var serverConfig = config.serverList[i];
                     var verifyRoutePath = routePathRegex(serverConfig.routePath);
                     if (!isNumber(serverConfig.serverPort)) {
                         invalidMicroServerStringList.push(serverConfig.name);
@@ -152,7 +152,7 @@ var config = {
     sslCertPath: "",
     sslBundlePath: [""],
     verifySSL: false,
-    microServiceList: [
+    serverList: [
         {
             name: "server1",
             url: "http://api.done.to",

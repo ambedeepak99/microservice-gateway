@@ -1,14 +1,16 @@
 {
   "name": "microservice-gateway",
-  "version": "1.0.0",
-  "description": "node microservice gateway",
+  "version": "1.0.1",
+  "description": "forwarding service request from gateway server to micro-services",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "node",
-    "microservice"
+    "microservice",
+    "forward request",
+    "gateway"
   ],
   "author": "deepak ambekar <ambedeepak99@gmail.com>",
   "license": "ISC",
